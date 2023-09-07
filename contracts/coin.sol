@@ -20,8 +20,8 @@ contract coin{
         balances[reciever] += amount;
         balances[sender] -= amount;
     }
-    function balance() public view returns (uint)
+    function balance(address account) public view returns (uint)
     {
-        return balances[msg.sender];
+        return balances[account];
     }
 }
